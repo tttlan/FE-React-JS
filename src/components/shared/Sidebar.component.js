@@ -10,7 +10,7 @@ class Sidebar extends Component {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/users">Users</Link>
+                        <Link to="/cart">Cart</Link>
                     </li>
                 </ul>
             </div>

@@ -5,7 +5,7 @@ import AuthRoute from './AuthRoute';
 
 import Home from '../containers/Home.container';
 import Login from '../containers/Login.container';
-import Users from '../containers/Users.container';
+import Cart from '../containers/Cart.container';
 
 class Routes extends Component {
     render() {
@@ -13,7 +13,7 @@ class Routes extends Component {
             <Fragment>
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={Login} />
-                <AuthRoute path="/users" component={Users} />
+                <AuthRoute path="/cart" component={Cart} />
             </Fragment>
         );
     }
