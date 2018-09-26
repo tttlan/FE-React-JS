@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
+import './Cart.scss';
+
 import CartComponent from './Cart.component';
 
 class CartPageComponent extends Component {
     render() {
-        console.log(this.props);
         return (
             <Grid>
                 <Row>Shopping Cart</Row>

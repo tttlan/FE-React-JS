@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
 
 import CartListComponent from './CartList.component';
 
@@ -37,18 +38,18 @@ class CartComponent extends Component {
         return (
             <div>
                 <div>Items in your cart</div>
-                <div className="cart">
-                    <div className="cart__items">
+                <Row>
+                    <Col sm={8}>
                         <CartListComponent
                             products={this.state.products}
                             handleChangeQuantity={this.handleChangeQuantity}
                             handleRemove={this.handleRemove}
                         />
-                    </div>
-                    <div className="cart_summary">
-                        <div>{this.calculateTotal()}</div>
-                    </div>
-                </div>
+                    </Col>
+                    <Col sm={4}>
+                        <div>{'$' + this.calculateTotal()}</div>
+                    </Col>
+                </Row>
                 
             </div>
         );

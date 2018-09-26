@@ -12,11 +12,21 @@ class CartListComponent extends Component {
                         <th>Product</th>
                         <th>Quantity</th>
                         <th>Total</th>
+                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        this.props.products.map(item => <CartItemComponent key={item.id} item={item} handleChangeQuantity={this.props.handleChangeQuantity} />)
+                        this.props.products.map(item => {
+                            return (
+                                <CartItemComponent
+                                    key={item.id}
+                                    item={item}
+                                    handleChangeQuantity={this.props.handleChangeQuantity}
+                                    handleRemove={this.props.handleRemove}
+                                />
+                            );
+                        })
                     }
                 </tbody>
             </Table>

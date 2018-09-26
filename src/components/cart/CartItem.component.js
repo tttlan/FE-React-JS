@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, FormControl } from 'react-bootstrap';
+import { Image, FormControl, Button } from 'react-bootstrap';
 
 class CartItemComponent extends Component {
     constructor(props) {
@@ -12,6 +12,10 @@ class CartItemComponent extends Component {
 
     handleChangeQuantity = (event) => {
         this.props.handleChangeQuantity && this.props.handleChangeQuantity(this.props.item.id, event.target.value);
+    }
+
+    handleRemove = (productId) => {
+        this.props.handleRemove && this.props.handleRemove(productId);
     }
 
     render() {
@@ -37,6 +41,9 @@ class CartItemComponent extends Component {
                 </td>
                 <td>
                     {item.quantity * item.price}
+                </td>
+                <td>
+                    <Button bsStyle="danger" onClick={this.handleRemove.bind(this, item.id)}>Remove</Button>
                 </td>
             </tr>
         );
