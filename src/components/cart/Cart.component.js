@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 import CartListComponent from './CartList.component';
+import CartSummaryComponent from './CartSummary.component';
 
 class CartComponent extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class CartComponent extends Component {
 
         this.state = {
             products: props.products,
-            total: 0
+            total: this.calculateTotal(props.products)
         };
     }
 
@@ -21,17 +22,19 @@ class CartComponent extends Component {
                 break;
             }
         }
-        this.setState({ products });
+        const total = this.calculateTotal(this.state.products);
+        this.setState({ products, total });
     }
 
     handleRemove = (productId) => {
         let { products } = this.state;
         products = products.filter(product => product.id !== productId);
-        this.setState({ products });
+        const total = this.calculateTotal(products);
+        this.setState({ products, total });
     }
 
-    calculateTotal = () => {
-        return this.state.products.reduce((total, product) => total + product.price * (product.quantity || 1), 0);
+    calculateTotal = (products) => {
+        return products.reduce((total, product) => total + product.price * (product.quantity || 1), 0);
     }
 
     render() {
@@ -47,7 +50,7 @@ class CartComponent extends Component {
                         />
                     </Col>
                     <Col sm={4}>
-                        <div>{'$' + this.calculateTotal()}</div>
+                        <CartSummaryComponent total={this.state.total} />
                     </Col>
                 </Row>
                 

@@ -5,9 +5,9 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 
 import logo from '../../logo.svg';
-import './Header.scss';
+import './app-header.scss';
 
-class Header extends Component {
+class AppHeader extends Component {
     render() {
         return (
             <Navbar inverse collapseOnSelect className="app-header">
@@ -35,4 +35,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default AppHeader;

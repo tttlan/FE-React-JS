@@ -1,0 +1,14 @@
+.app-layout {
+    background-color: #eff2f5;
+    height: 100vh;
+    overflow: hidden;
+
+    &__content {
+        background-color: white;
+        min-height: calc(100vh - 198px);
+    }
+
+    &__content-view {
+        padding: 0px;
+    }
+}

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 
-import Layout from './components/shared/Layout.component';
+import AppLayout from './components/shared/AppLayout.component';
 
 class App extends Component {
 	render() {
@@ -9,7 +9,7 @@ class App extends Component {
 			<div className="app">
 				<Router>
 					<Fragment>
-						<Layout />
+						<AppLayout />
 					</Fragment>
 				</Router>
 			</div>
