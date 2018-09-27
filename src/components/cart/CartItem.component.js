@@ -23,12 +23,10 @@ class CartItemComponent extends Component {
         return (
             <tr>
                 <td>
-                    <div>
-                        <Image src={item.image} width={100} alt="product" rounded />
-                    </div>
-                    <div>
-                        <div>{item.name}</div>
-                    </div>
+                    {item.name}
+                </td>
+                <td>
+                    <Image src={item.image} width={100} alt="product" rounded />
                 </td>
                 <td>
                     <FormControl

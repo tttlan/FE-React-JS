@@ -9,7 +9,8 @@ class CartListComponent extends Component {
         <Table responsive className="cart__list">
             <thead>
                 <tr>
-                    <th>Product</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
                     <th>Quantity</th>
                     <th>Price</th>
                     <th>Total</th>
