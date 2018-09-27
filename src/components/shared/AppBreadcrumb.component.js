@@ -9,7 +9,7 @@ class AppBreadcrumb extends Component {
         const currentPathName = window.location.pathname;
         let active = false;
 
-        if(currentPathName === pathName) {
+        if (currentPathName === pathName) {
             active = true;
         }
 

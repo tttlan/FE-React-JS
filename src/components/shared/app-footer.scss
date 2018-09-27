@@ -1,3 +1,19 @@
 .app-footer {
+    background-color: #eff2f5;
+    position: relative;
+    margin-top: 20px;
+    height: 100px;
+    border-color: 2px solid #d2cbcb;
     
+    .container {
+        left: calc(50% - 585px);
+        position: absolute;
+    }
+
+    p {
+        text-align: center;
+        width: 100%;
+        color: #777 !important;
+        font-size: 18px;
+    }
 }

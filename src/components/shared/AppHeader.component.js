@@ -10,7 +10,7 @@ import './app-header.scss';
 class AppHeader extends Component {
     render() {
         return (
-            <Navbar inverse collapseOnSelect className="app-header">
+            <Navbar className="app-header">
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">
