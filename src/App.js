@@ -1,26 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 
-import './App.scss';
-
-import Sidebar from './components/shared/Sidebar.component';
-import Header from './components/shared/Header.component';
-import Routes from './routes';
+import Layout from './components/shared/Layout.component';
 
 class App extends Component {
-    render() {
-        return (
-          	<div className="App">
-			  	<Router>
+	render() {
+		return (
+			<div className="app">
+				<Router>
 					<Fragment>
-						<Header />
-						<Sidebar />
-						<Routes />
+						<Layout />
 					</Fragment>
 				</Router>
-          	</div>
-        );
-    }
+			</div>
+		);
+	}
 }
 
 export default App;
