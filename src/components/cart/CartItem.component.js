@@ -33,6 +33,7 @@ class CartItemComponent extends Component {
                         type="number"
                         value={item.quantity}
                         placeholder="Enter quantity"
+                        min="0"
                         onChange={this.handleChangeQuantity}
                     />
                 </td>
