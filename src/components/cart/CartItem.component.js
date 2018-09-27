@@ -24,7 +24,7 @@ class CartItemComponent extends Component {
             <tr>
                 <td>
                     <div>
-                        <Image src={item.image} width={100} alt="product" rounded/>
+                        <Image src={item.image} width={100} alt="product" rounded />
                     </div>
                     <div>
                         <div>{item.name}</div>
@@ -49,5 +49,5 @@ class CartItemComponent extends Component {
         );
     }
 }
-  
+
 export default CartItemComponent;

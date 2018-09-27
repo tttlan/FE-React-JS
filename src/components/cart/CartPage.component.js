@@ -10,7 +10,7 @@ class CartPageComponent extends Component {
         return (
             <Grid>
                 <Row>
-                    <Col xs={12}>
+                    <Col xs={12} md={12}>
                         <CartComponent products={this.props.products} />
                     </Col>
                 </Row>

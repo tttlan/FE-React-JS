@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 
 import CartListComponent from './CartList.component';
-import CartSummaryComponent from './CartSummary.component';
 
 class CartComponent extends Component {
     constructor(props) {
@@ -15,7 +17,7 @@ class CartComponent extends Component {
     }
 
     handleChangeQuantity = (productId, quantity) => {
-        let { products } = this.state;console.log(productId, quantity)
+        let { products } = this.state; console.log(productId, quantity)
         for (let product of products) {
             if (product.id === productId) {
                 product.quantity = quantity;
@@ -39,24 +41,21 @@ class CartComponent extends Component {
 
     render() {
         return (
-            <div>
-                <div>Items in your cart</div>
+            <Grid bsClass="cart">
                 <Row>
-                    <Col sm={8}>
+                    <Col sm={12} md={12}>
                         <CartListComponent
                             products={this.state.products}
+                            total={this.state.total}
                             handleChangeQuantity={this.handleChangeQuantity}
                             handleRemove={this.handleRemove}
                         />
                     </Col>
-                    <Col sm={4}>
-                        <CartSummaryComponent total={this.state.total} />
-                    </Col>
                 </Row>
-                
-            </div>
+
+            </Grid>
         );
     }
 }
-  
+
 export default CartComponent;

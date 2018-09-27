@@ -21,14 +21,13 @@ class AppBreadcrumb extends Component {
 
         }
 
-        console.log(active);
         return active;
     }
 
     render() {
         return (
             <Breadcrumb className="app-breadcrumb">
-                <Breadcrumb.Item active={this.checkActiveBreadcrumbItem('/')}>Home</Breadcrumb.Item>
+                <Breadcrumb.Item href="/" active={this.checkActiveBreadcrumbItem('/')}>Home</Breadcrumb.Item>
                 {
                     this.checkActiveBreadcrumbItem('/cart') ?
                         <Breadcrumb.Item active={this.checkActiveBreadcrumbItem('/cart')}>Shopping Cart</Breadcrumb.Item> : ''

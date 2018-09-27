@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
 import CartItemComponent from './CartItem.component';
+import CartSummaryComponent from './CartSummary.component';
 
 class CartListComponent extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <Table>
+            <Table responsive>
                 <thead>
                     <tr>
                         <th>Product</th>
                         <th>Quantity</th>
                         <th>Total</th>
-                        <th>&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +32,14 @@ class CartListComponent extends Component {
                             );
                         })
                     }
+                    <tr>
+                        <td>
+                            Total
+                        </td>
+                        <td colSpan="3">
+                            <CartSummaryComponent total={this.props.total} />
+                        </td>
+                    </tr>
                 </tbody>
             </Table>
         );
