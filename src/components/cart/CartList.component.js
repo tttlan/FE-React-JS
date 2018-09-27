@@ -5,12 +5,14 @@ import CartItemComponent from './CartItem.component';
 
 class CartListComponent extends Component {
     render() {
-        return (<Table responsive>
+        return (
+        <Table responsive className="cart__list">
             <thead>
                 <tr>
                     <th>Product</th>
                     <th>Quantity</th>
                     <th>Total</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>

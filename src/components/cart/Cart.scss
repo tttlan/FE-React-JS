@@ -4,13 +4,36 @@
     &__summary {
         margin: 0;
         padding: 20px;
-        background-color: #337ab7;
+        background-color: #3f93dc;
         color: white;
         font-weight: bold;
         font-size: 25px;
+        margin-bottom: 20px;
 
         div {
             text-align: right;
+        }
+    }
+
+    &__list {
+        border: 1px solid #f4f4f4;
+        border-right: 0;
+        border-bottom: 0;
+
+        thead th,
+        tbody td {
+            border-right: 1px solid #f4f4f4;
+            text-align: center;
+            height: 62px;
+            padding: 16px;
+            word-break: break-word;
+            border-bottom: 1px solid #f4f4f4 !important;
+        }
+
+        thead th {
+            color: rgba(0,0,0,.85);
+            font-weight: 500;
+            background: #fafafa;
         }
     }
 }
