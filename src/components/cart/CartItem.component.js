@@ -41,7 +41,7 @@ class CartItemComponent extends Component {
                     {`$${item.price}`}
                 </td>
                 <td>
-                    {item.quantity * item.price}
+                    {`$${item.quantity * item.price}`}
                 </td>
                 <td>
                     <Button bsStyle="danger" onClick={this.handleRemove.bind(this, item.id)}>Remove</Button>
