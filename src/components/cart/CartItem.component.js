@@ -28,7 +28,6 @@ class CartItemComponent extends Component {
                     </div>
                     <div>
                         <div>{item.name}</div>
-                        <div>{`$${item.price}`}</div>
                     </div>
                 </td>
                 <td>
@@ -38,6 +37,9 @@ class CartItemComponent extends Component {
                         placeholder="Enter quantity"
                         onChange={this.handleChangeQuantity}
                     />
+                </td>
+                <td>
+                    {`$${item.price}`}
                 </td>
                 <td>
                     {item.quantity * item.price}
