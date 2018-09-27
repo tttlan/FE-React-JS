@@ -9,16 +9,8 @@ class AppBreadcrumb extends Component {
         const currentPathName = window.location.pathname;
         let active = false;
 
-        switch (currentPathName) {
-            case pathName:
-                active = true;
-                break;
-            case pathName:
-                active = true;
-                break;
-            default:
-                break;
-
+        if(currentPathName === pathName) {
+            active = true;
         }
 
         return active;

@@ -4,9 +4,10 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 
-import Header from './AppHeader.component';
+import AppHeader from './AppHeader.component';
 import Routes from '../../routes/AppRoutes';
 import AppBreadcrumb from './AppBreadcrumb.component';
+import AppFooter from './AppFooter.component';
 
 import './app-layout.scss';
 
@@ -14,7 +15,7 @@ class AppLayout extends Component {
     render() {
         return (
             <div className="app-layout">
-                <Header />
+                <AppHeader />
 
                 <Grid className="app-layout__content">
                     <Row className="show-grid">
@@ -24,6 +25,8 @@ class AppLayout extends Component {
                         </Col>
                     </Row>
                 </Grid>
+
+                <AppFooter />
             </div>
         );
     }
