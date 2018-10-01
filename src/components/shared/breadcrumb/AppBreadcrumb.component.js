@@ -13,13 +13,13 @@ class AppBreadcrumb extends Component {
                 {
                     id: 'home',
                     name: 'Home',
-                    icon: 'glyphicon glyphicon-home',
+                    icon: 'home',
                     href: '/'
                 },
                 {
                     id: 'shopping_cart',
                     name: 'Shopping Cart',
-                    icon: 'glyphicon glyphicon-shopping-cart',
+                    icon: 'shopping-cart',
                     href: '/cart'
                 }
             ]
@@ -29,7 +29,7 @@ class AppBreadcrumb extends Component {
         this.showBreadcrumb = this.showBreadcrumb.bind(this);
     }
 
-    checkActiveBreadcrumbItem(pathName) {
+    checkActiveBreadcrumbItem = (pathName) => {
         const currentPathName = window.location.pathname;
         let active = false;
 
@@ -40,7 +40,7 @@ class AppBreadcrumb extends Component {
         return active;
     }
 
-    showBreadcrumb(href) {
+    showBreadcrumb = (href) => {
         const currentPathName = window.location.pathname;
         let show = false;
 

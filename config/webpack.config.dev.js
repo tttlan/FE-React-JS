@@ -150,6 +150,7 @@ module.exports = {
               // directory for faster rebuilds.
               cacheDirectory: true,
             },
+            exclude: /node_modules/
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
