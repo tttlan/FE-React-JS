@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 
-import logo from '../../logo.svg';
+import logo from '../../../logo.svg';
 import './app-header.scss';
 
 class AppHeader extends Component {

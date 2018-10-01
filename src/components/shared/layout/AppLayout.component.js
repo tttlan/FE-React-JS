@@ -4,10 +4,10 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 
-import AppHeader from './AppHeader.component';
-import Routes from '../../routes/AppRoutes';
-import AppBreadcrumb from './AppBreadcrumb.component';
-import AppFooter from './AppFooter.component';
+import Routes from '../../../routes/AppRoutes';
+import AppHeader from '../header/AppHeader.component';
+import AppBreadcrumb from '../breadcrumb/AppBreadcrumb.component';
+import AppFooter from '../footer/AppFooter.component';
 
 import './app-layout.scss';
 
